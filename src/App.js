@@ -65,14 +65,6 @@ export default function AaryaAshmiPortfolio() {
     { title: "Participation in Smart India Hackathon", img: "/images/certificate3.jpeg" }
   ];
 
-  // const awards = [
-  //   { title: "1st Runner-Up — Smart India Hackathon", img: "/images/SIH.png" },
-  //   { title: "Branch Topper — 2023, 2024, 2025", img: "/images/award1.jpg" },
-  //   { title: "Best Girls Team Award — Hack SRIT 2025", img: "/images/award2.jpg" },
-  //   { title: "1st Runner-Up — Ecopreneur Hackathon", img: "/images/award3.jpg" },
-  //   { title: "3rd Position — Slide The Change at IEEE SHE ASPIRE 2.0", img: "/images/award4.jpg" },
-  // ];
-
   const hackathons = [
     {
       title: "Global Entrepreneurship Summit 2025",
@@ -152,8 +144,6 @@ export default function AaryaAshmiPortfolio() {
               <a href="https://linkedin.com/in/aarya-ashmi-647317258" target="_blank" rel="noreferrer"><Linkedin size={18} /></a>
               <a href="https://github.com/aaryaashmi" target="_blank" rel="noreferrer"><Github size={18} /></a>
               <a href="mailto:ashmiaarya21@gmail.com"><Mail size={18} /></a>
-              {/* <a href="https://leetcode.com/u/riyaaa19/" target="_blank" rel="noreferrer">LC</a>
-              <a href="https://www.hackerrank.com/profile/riyasaraf19" target="_blank" rel="noreferrer">HR</a> */}
             </div>
           </div>
           <div className="hero-img">
@@ -273,18 +263,6 @@ export default function AaryaAshmiPortfolio() {
           </div>
         </section>
       )}
-
-      {/* ===== Awards Section ===== */}
-      {/* {activePage === "awards" && (
-        <section>
-          <h2>Awards</h2>
-          <div className="grid">
-            {awards.map((a, i) => (
-              <TimelineCard key={i} title={a.title} img={a.img} type="award" />
-            ))}
-          </div>
-        </section>
-      )} */}
 
       {/* ===== Hackathons Section =====  */}
       {activePage === "hackathons" && (
