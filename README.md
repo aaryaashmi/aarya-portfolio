@@ -6,7 +6,7 @@ Welcome to my personal portfolio! This website showcases my projects, education,
 
 ## 🔗 Live Demo
 
-[View Live Portfolio](https://aaryaashmi-portfolio.netlify.app/) 
+[View Live Portfolio](https://aaryaashmi-portfolio.netlify.app) 
 
 ---
 
