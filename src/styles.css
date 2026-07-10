@@ -1,0 +1,583 @@
+/* ===== General Styling ===== */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    color: #111;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
+header {
+    position: sticky;
+    top: 0;
+    background: rgb(112, 71, 135);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.8s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.08);
+}
+
+nav button {
+    background: none;
+    border: none;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s, transform 0.3s;
+}
+
+nav button.active {
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+}
+
+nav button:hover {
+    color: #ffe3f0;
+    transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 80px 60px;
+    background: white;
+    animation: fadeIn 1s ease-in;
+}
+
+section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: rgb(112, 71, 135);
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #773279;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    animation: expand 0.8s ease-in-out;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 60px;
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-text h2 {
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+    color: rgb(112, 71, 135);
+}
+
+.hero-text .highlight {
+    background: linear-gradient(45deg, rgb(112, 71, 135), rgb(112, 71, 135));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;  
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+}
+
+.hero-text p {
+    max-width: 520px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Typing Effect Fix ===== */
+.typing-container {
+    display: inline-block;
+    min-width: 300px;
+    white-space: nowrap;
+}
+
+.typing {
+    display: inline-block;
+    border-right: 2px solid rgb(112, 71, 135);
+    overflow: hidden;
+    vertical-align: middle;
+    animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: rgb(112, 71, 135); }
+}
+
+/* ===== Avatar ===== */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-circle {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: #8f4fa8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.avatar-circle img {
+    width: 95%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 77, 166, 0.3);
+}
+
+/* ===== Buttons ===== */
+button.cta,
+button.outline {
+    margin-right: 12px;
+    padding: 10px 22px;
+    width: 160px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button.cta,
+.hero-buttons a.cta {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+button.cta {
+    background: rgb(112, 71, 135);
+    color: white;
+}
+
+button.cta:hover {
+    background: rgb(112, 71, 135);
+}
+
+button.outline {
+    background: transparent;
+    color: rgb(112, 71, 135);
+    border: 2px solid rgb(112, 71, 135);
+}
+
+button.outline:hover {
+    background: rgb(112, 71, 135);
+    color: white;
+}
+
+a.cta {
+    display: inline-block;
+    margin-right: 12px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: rgb(112, 71, 135);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.cta:hover {
+    background: rgb(112, 71, 135);
+}
+
+/* ===== Social Icons ===== */
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.social-icons a {
+    color: rgb(112, 71, 135);
+    transition: color 0.25s;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: rgb(112, 71, 135);
+}
+
+/* ===== Footer ===== */
+footer {
+    padding: 40px;
+    text-align: center;
+    background: rgb(112, 71, 135);
+    color: white;
+    font-weight: 500;
+}
+
+/* ===== Grid for Projects, Certificates, Awards ===== */
+.grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Timeline for Education ===== */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 40px;
+    border-left: 3px solid rgb(112, 71, 135);
+}
+
+.timeline-card {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.timeline-card span {
+    position: absolute;
+    left: -28px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(112, 71, 135);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes expand {
+    0% { width: 0; }
+    100% { width: 60px; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-img {
+        margin-top: 30px;
+    }
+}
+
+/* ===== Timeline Styling for Education (Right-side Images) ===== */
+.timeline {
+    position: relative;
+    padding-right: 60px;
+    margin-left: 20px;
+    border-left: 3px solid rgb(112, 71, 135);
+}
+
+.timeline .timeline-card {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.timeline .timeline-card:hover {
+    transform: scale(1.03);
+}
+
+.timeline .timeline-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    right: -65px;
+    top: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.timeline .timeline-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.timeline .timeline-card p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== About Section ===== */
+.about {
+    background: #fff5f9;
+    padding: 80px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: rgb(112, 71, 135);
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: rgb(112, 71, 135);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About container layout */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Text points */
+.about-container ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-container ul li {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    align-items: flex-start;
+}
+
+.about-container ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: rgb(112, 71, 135);
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* About image */
+.about-img {
+    flex: 0 0 320px; /* increased width */
+    display: flex;   /* enable flexbox */
+    justify-content: center;
+    align-items: center; /* vertically center with the points */
+    margin-top: -70px;
+}
+
+.about-img .avatar-circle {
+    width: 320px;  /* increased size */
+    height: 320px; /* increased size */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-img .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-img .avatar-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(255,77,166,0.3);
+}
+
+
+/* ===== Skills Section ===== */
+.skills-section {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* spacing between capsules */
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.skills-card {
+    background: #ffe6f0;
+    color: rgb(112, 71, 135);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+}
+
+.skills-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,77,166,0.2);
+}
+
+.skills-card h4,
+.skills-card ul,
+.skills-card li {
+    display: none; /* hide old headings/lists */
+}
+.about h3.skills-heading {
+    color: rgb(112, 71, 135); /* Dark Pink */
+    text-align: center;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 24px;
+}
+
+.about h3.skills-heading::after {
+    content: "";
+    width: 80px;       /* length of underline */
+    height: 3px;       /* thickness */
+    background: #602077; /* Dark Purple underline */
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+/* ===== Responsive About Section ===== */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-img {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-section {
+        justify-content: center;
+    }
+}
